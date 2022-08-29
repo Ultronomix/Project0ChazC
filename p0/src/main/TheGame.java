@@ -35,7 +35,7 @@ public class TheGame {
 					for (String i : lineup) {
 						System.out.println(i);
 						System.out.println("                      ");
-						
+						System.out.println("YIKES!");
 					}
 				
 				}
