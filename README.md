@@ -36,13 +36,15 @@ I.E, the Dodgers lineup. Also within the application is the option to launch the
 
 to the initial menu, where you are also able to exit out of the application with the press of a button.
 
-This application employs text based information describing the events of an actual baseball game while staying (mostly) 
+This application employs text based information describing the events of an actual baseball game while 
 
-true to its rules (and java rules!). there are some bugs that persist within this build such as the sophistication of the 
+staying (mostly) true to its rules (and java rules!). there are some bugs that persist 
 
-strike system, but there are methods in place where strike counts reset for every new batter. This program randomizes 
+within this build such as the sophistication of the strike system, but there are methods in place where
 
-questions and answers with the user having to score 5 correct answers or "consecutive home runs" to win the game.
+strike counts reset for every new batter. This program randomizes question and answers
+ 
+with the user having to score 5 correct answers or "consecutive home runs" to win the game.
 
 
 
