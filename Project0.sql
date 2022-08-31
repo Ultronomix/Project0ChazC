@@ -6,9 +6,14 @@ platform_name varchar NOT NULL UNIQUE
 );
 
 
+
 DROP TABLE platform;
 
+ALTER TABLE platform 
+ALTER COLUMN platform_name varchar NOT NULL;
 
+INSERT INTO platform (platform_name)
+values('Mobile');
 
 INSERT INTO platform (publisher_id, release_year, platform_name)
 VALUES ('01007F40132', '2022', 'Mobile');
@@ -16,6 +21,9 @@ VALUES ('01007F40132', '2022', 'Mobile');
 SELECT *
 FROM platform;
 
+UPDATE publishing 
+SET platform_id = '1bffbeff-9c61-4e96-bb6e-e4b08faad464'
+WHERE platform_id IS NULL; 
 
 
 CREATE TABLE publishing(
@@ -23,10 +31,12 @@ id uuid DEFAULT gen_random_uuid(),
 game_id int NOT NULL UNIQUE,
 publisher_id varchar NOT NULL
 );
+
+
 DROP TABLE publishing;
 
 ALTER TABLE publishing 
-RENAME COLUMN publisher_id TO game_publisher_id;
+ADD platform_id varchar;
 
 INSERT INTO publishing (game_id, game_publisher_id)
 VALUES ('215', '01007F40132' );
@@ -64,11 +74,14 @@ FROM genre;
 
 SAVEPOINT;
 
-
+ 
 SELECT *
 FROM platform p
-INNER JOIN publishing pu 
-ON p.publisher_id = pu.game_publisher_id
+RIGHT JOIN publishing pu 
+ON p.id = pu.id;
+
+
+
 
 
 
