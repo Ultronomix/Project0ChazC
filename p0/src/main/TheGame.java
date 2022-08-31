@@ -43,6 +43,10 @@ public class TheGame {
 					
 					BaseballQuiz b = new BaseballQuiz();
 					b.start();
+					System.out.println("PLAYYYYYYYY BALLLLL!");
+					System.out.println("                     ");
+					System.out.println("                     ");
+					System.out.println("NOW BATTING: MOOKIE BETTS!!");
 				}
 					gameMenu();
 			

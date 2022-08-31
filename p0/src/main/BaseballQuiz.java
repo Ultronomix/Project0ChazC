@@ -142,10 +142,12 @@ public void start() {
 		if(numCorrect == 1 && outs == 0) {
 			System.out.print("Now Batting: ");
 			System.out.println(dueUp[0]);
+			resetStrikes();
 		}
 		if(numCorrect == 2 && outs == 0) {
 			System.out.print("Now Batting: ");
 			System.out.println(dueUp[1]);
+			resetStrikes();
 		}
 		if(numCorrect == 3 && outs == 0) {				
 			System.out.print("Now Batting: ");
@@ -196,7 +198,7 @@ public void start() {
 	outs++;
 	System.out.println("OUT: " + outs + ": Next Batter " );
 	
-	resetStrikes();
+	
 	}
 	
 	
@@ -241,12 +243,14 @@ if (numCorrect == 5) {
 	
 
 
-public void resetStrikes(){
+private void resetStrikes() {
+	strikes = 0;
+}
 
-strikes = 0;
+
+
 
 }
 
-}
 
 
